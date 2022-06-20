@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>firebase form auth</title>
+  <link rel="stylesheet" href="login.css">
+    <script type="module" src="login.js"></script>
+  </head>
+  <body>
+    <div class="container" id="content01">
+      <div class="img-slider">
+      </div>
+    <div class="center-box" id="login-div">
+      <h2 >Login</h2>
+      <input type="email" id="login-email" class="text-field" name="login-email" placeholder="Email" required/><br>
+      <input type="password" id="login-password" class="text-field" name="login-password" placeholder="Password" required/><br>
+      <button id="login-btn" class="btn-style">Login</button><br>
+      <button id="reg-btn" class="an-btn"><a href="Signup.html">don't have an account? REGISTER</button></a> 
+   </div>
+
+   <div class="center-box" id="register-div">
+     <h2>Register</h2>
+     <input type="email" id="register-email" class="text-field" name="register-email" placeholder="Email" required/><br>
+     <input type="password" id="register-password" class="text-field" name="register-password" placeholder="Password" required/><br>
+     <input type="address" id="register-address" class="text-field" name="address" placeholder="address" required/><br>
+    <button id="register-btn" class="btn-style">Register</button><br>
+     <button id="log-btn" class="an-btn">have an account? LOGIN</button>
+  </div>
+
+<div id="result-box">
+  <h3 id="result"></h3><br>
+     <button id="log-out-btn" class="btn-style">LOGIN OUT</button>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+<script src="form1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </body>
+  </html>
