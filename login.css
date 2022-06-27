@@ -1,5 +1,11 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 body{
-  background-color: blue;
+  background: url(/marc-newberry-9vcEn3BJyy8-unsplash.jpg) no-repeat;
+  height: 100vh;
 }
 .center-box{
   position: absolute;

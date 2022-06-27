@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: blue;
+    background: url(/greg-rosenke-bJdK9v-VVw0-unsplash.jpg) no-repeat;
     height: 100vh;
 }
 .container {
