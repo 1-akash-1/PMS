@@ -4,7 +4,7 @@
 	margin: 0;
 }
 .wrapper{
-	background: url(killari-hotaru-6ZGEQb-CxIo-unsplash.jpg) no-repeat;
+	background: url(yo.jpg) no-repeat;
 	background-size: cover;
 	height: 100vh;
 }
@@ -82,9 +82,11 @@
 	border: 1px solid #cc0000;
 	border-radius: 25px;
 	transition: .4s;
+	
 }
 .buttons .btn2{
 	margin-left: 5px;
+	text-decoration: none;
 	
 }
 .buttons button:hover{
@@ -108,6 +110,7 @@
 	display: flex;
 	justify-content:flex-end;
 	padding-right:190px;
+	text-decoration: none;
 
   }
   .center .plusbutton .button2{
@@ -115,4 +118,5 @@
 	height: 60px;
 	width:70px;
 	font-size: 40px;
+	text-decoration: none;
   }
