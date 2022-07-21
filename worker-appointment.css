@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	background: url(yo.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+}
+.navbar .logo{
+	width: 140px;
+	height: auto;
+	padding: 20px 100px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: red;
+	border-radius: 2px;
+}
+.wrapper .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+.center h1{
+	color: white;
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}
+.center h2{
+	color: rgb(14, 13, 13);
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+	text-align: center;
+}
+.center .buttons{
+	margin: 35px 280px;
+}
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffb3b3;
+	background: red;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #cc0000;
+	border-radius: 25px;
+	transition: .4s;
+	
+}
+.buttons .btn2{
+	margin-left: 5px;
+	text-decoration: none;
+	
+}
+.buttons button:hover{
+	background: #cc0000;
+}
+
+  .table .appointmentTable{
+	border-width: 4;
+	border-color: black;
+	padding-top: 40px;
+
+  }
+  th,td{
+	border: 1px solid #0f0f0f;
+  text-align: 'center';
+  padding: 8px;
+  height:100px;
+  width:300px;
+  }
+  .center .plusbutton{
+	display: flex;
+	justify-content:flex-end;
+	padding-right:190px;
+	text-decoration: none;
+
+  }
+  .center .plusbutton .button2{
+	background-color:forestgreen;
+	height: 60px;
+	width:70px;
+	font-size: 40px;
+	text-decoration: none;
+  }
