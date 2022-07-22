@@ -43,7 +43,11 @@ document.getElementById("log-btn").addEventListener('click', function(){
     document.getElementById("result-box").style.display="inline";
      document.getElementById("login-div").style.display="none";
      document.getElementById("result").innerHTML="Sorry ! <br>"+errorMessage;
-
+     ￼
+     Sorry !
+     Firebase: Error (auth/invalid-email).
+     
+     ￼LOG OUT
   });
 });
 
