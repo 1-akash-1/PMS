@@ -4,43 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <title>User Appointment</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user-appointment.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <div>
-        <center>
-        <div class="center">
-
-            <h2> Schedule List</h2>
-            <div class="plusbutton">
-             <a href="user-appointment-time.html">
-                <button  class="button2">+</button>
-              </a>
-            </div>
-            <div class="table">
-
-                    <table class="appointmentTable">
-                    <tr >
-                      <th>Schedule Date</th>
-                      <th>Schedule Day</th>
-                      <th>Schedule time</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-
-                  </table>
-                  
-                </center>
-            </div>
-        </div>
+  <div class="container rounded mt-5 bg-white p-md-5">
+    <div class="h2 font-weight-bold">Schedule List</div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>                    
+                    <th scope="col">Date</th>                    
+                    <th scope="col">Time</th>                    
+                    <th scope="col">Status</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-blue">            
+                    <td class="pt-2">
+    
+                        <div class="pl-lg-5 pl-md-3 pl-1 name">Emilia Thomas</div>
+                    </td>                
+                    <td class="pt-3 mt-1">24 July 2022</td>
+                    <td class="pt-3">11:00 AM</td>
+                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
+                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
+                </tr>
+              <!---- <tr id="spacing-row">
+                    <td></td>
+                </tr>
+                <tr class="bg-blue">
+                    <td class="pt-2">
+ 
+                        <div class="pl-lg-5 pl-md-3 pl-1 name">Anny Adams</div>
+                    </td>
+                    <td class="pt-3">26 Sep 2020</td>
+                    <td class="pt-3">11:00 AM</td>
+                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
+                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
+                </tr>
+                <tr id="spacing-row">
+                    <td></td>
+                </tr>
+                <tr class="bg-blue">
+                    <td class="pt-2">
+                        <div class="pl-lg-5 pl-md-3 pl-1 name">Arnold Linn</div>
+                    </td>
+                    <td class="pt-3">26 Sep 2020</td>
+                    <td class="pt-3">02:00 PM</td>
+                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
+                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
+                </tr>
+                <tr id="spacing-row">
+                    <td></td>
+                </tr>
+                <tr class="bg-blue">
+                    <td class="pt-2">
+                        <div class="pl-lg-5 pl-md-3 pl-1 name">Josh Limosel</div>
+                    </td>
+                    <td class="pt-3">26 Sep 2020</td>
+                    <td class="pt-3">04:00 PM</td>
+                    <td class="pt-3"><span class="fa fa-minus pl-3"></span></td>
+                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 
 </html>
