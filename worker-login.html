@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><Worker-login></Worker-login></title>
+    <title>WorkerLogin</title>
     <link rel="stylesheet" href="worker-login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 </head>
 <body>
-    
+    <main>
 <div class="container">
     <div class="row">
         <div class="col-lg-3 col-md-2"></div>
@@ -49,7 +49,7 @@
                                 <!-- Error Message -->
                             </div>
                             <div  class="col-lg-6 login-btm login-button">
-                                <button onclick="AdminLogin()" type="submit" class="btn btn-outline-primary">LOGIN</button>
+                                <a onclick="AdminLogin()"><span type="submit" class="btn btn-outline-primary">LOGIN</span></a>
                             </div>
                         </div>
                     </form>
@@ -58,6 +58,7 @@
             <div class="col-lg-3 col-md-2"></div>
         </div>
     </div>
+    </main>
 <script>
 function AdminLogin() {
     window.location.href = "worker-menu.html";
