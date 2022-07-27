@@ -58,11 +58,12 @@ body{
   color: rgb(150, 148, 148);
 }
 .container {
-  width: 500px;
-  height: 500px;
+  width: 340px;
+  height: 340px;
   background-color: white;
   position: absolute;
   top: 100px;
   left: 450px;
   border-radius: 20px;
+
 }
