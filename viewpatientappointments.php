@@ -29,7 +29,7 @@ tr,td{
 			<nav class="navbar">
 				<ul>
 				<li style="float:left;border-right:none"><strong><?php session_start(); echo $_SESSION['email']; ?></strong></li>
-					<li><a class="active" href="#">Home</a></li>
+					<li><a href="dashboard.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="cancelbookingpatient.php">Services</a></li>
 					<li><a href="profile.php">Profile</a></li>

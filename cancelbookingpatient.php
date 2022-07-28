@@ -1,3 +1,10 @@
+<?php
+//include auth_session.php file on all user panel pages
+include("auth_session.php");
+require('db.php');
+?>
+
+
 <html>
 <head>
 <link rel="stylesheet" href="main.css">
