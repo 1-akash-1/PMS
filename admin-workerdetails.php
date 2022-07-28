@@ -16,6 +16,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+<?php include "dbconfig.php"; ?>
+<?php include "db.php"; ?>
 
 <body>
   <div class="container rounded mt-5 bg-white p-md-5">
@@ -24,64 +26,34 @@
       <br>
     <div class="table-responsive">
 
-        <table class="table">
-            <thead>
-                <tr>
-                  
-                    <th scope="col">Name</th>                    
-                    <th scope="col">Contact</th>                    
-                    <th scope="col">Address</th>                    
-                    <th scope="col">House No.</th>  
-                    <th scope="col">Pin Code</th>                    
-                   
-                    <th scope="col">Status</th> 
-                      <th scope="col">Assign Work</th> 
-                    
-                    
-                                      
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-blue">    
-                         
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                    
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
-
-                 <tr class="bg-blue">    
-                    
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                   
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
-
-                 <tr class="bg-blue">    
-                        
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                   
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                   
-                </tr>
-
+    <?php
+	$sql5 = "Select * from users";
+			$result5=mysqli_query($conn, $sql5);  
+			echo "<table>
+					<tr>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>Contact</th>
+					<th>Address</th>
+                    <th>Region</th>
+					</tr>";
+					while($row5= mysqli_fetch_array($result5))
+				{
+					$sql5="SELECT *FROM collector ";
+						$result5= mysqli_query($conn,$sql5);
+						while($row5= mysqli_fetch_array($result5))
+						{
+								echo "<tr>";
+								echo "<td>"  .$row5['name'] . "</td>";
+								echo "<td>" . $row5['gender'] . "</td>";
+								echo "<td>" . $row5['contact'] . "</td>";
+								echo "<td>" . $row5['address'] . "</td>";
+                                echo "<td>" . $row5['region'] . "</td>";
+								echo "</tr>";
+						}
+		 		}
+							
+					?>
 
 
                 
