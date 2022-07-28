@@ -1,3 +1,9 @@
+<?php
+//include auth_session.php file on all user panel pages
+
+require('db.php');
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +12,8 @@
     <title>Date and time</title>
     <link rel="stylesheet" href="user-appointment-time.css">
 
-  </head>
+  </head><?php include "dbconfig.php"; ?>
+<?php include "db.php"; ?>
   <body>
     
    

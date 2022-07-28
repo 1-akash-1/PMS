@@ -59,7 +59,7 @@ function getDay(val) {
 <body style="background-image:url(images/bookback.jpg)">
 	<div class="header">
 		<ul>
-			<li><a href="dashboard.php">Home</a></li>
+			<li><a href="user-menu.php">Home</a></li>
 		</ul>
 	</div>
 	<form action="book.php" method="post">
@@ -150,7 +150,7 @@ if(isset($_POST['submit']))
 				if (mysqli_query($conn, $sql)) 
 				{
 						echo "<h2>Booking successful!! Redirecting to home page....</h2>";
-						header( "Refresh:2; url=dashboard.php");
+						header( "Refresh:2; url=user-menu.php");
 
 				} 
 				else

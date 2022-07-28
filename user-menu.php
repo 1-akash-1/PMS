@@ -199,10 +199,10 @@ echo "<td><td>" . $row["username"] ."</td></td>";
 
   <script>
     function req1() {
-        window.location.href = "appointment.html";
+        window.location.href = "book.php";
     }
     function req2() {
-        window.location.href = "user-checkstatus.html";
+        window.location.href = "viewuserappointments.php";
     }
     function req3() {
         window.location.href = "profile.html";
