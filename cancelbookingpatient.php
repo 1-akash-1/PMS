@@ -49,7 +49,7 @@ if(isset($_POST['submit']))
 		$updatequery="update book set Status='Cancelled' where email='$email' and timestamp= '$timestamp'";
 				if (mysqli_query($conn, $updatequery)) 
 				{
-							echo "Appointment Cancelled successfully..!!<br>";
+							echo "Appointment Cancelled successfully..!!";
 							header( "Refresh:2; url=dashboard.php");
 
 				} 
