@@ -13,8 +13,8 @@ require('db.php');
 <body style="background-image:url(images/cancelback.jpg)">
 	<div class="header">
 		<ul>
-			<li style="float:left;border-right:none"><a href="dashboard.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><strong> Skylabs </strong>Appointment Booking System</a></li>
-			<li><a href="dashboard.php">Home</a></li>
+			<li style="float:left;border-right:none"><a href="user-menu.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><strong> Skylabs </strong>Appointment Booking System</a></li>
+			<li><a href="user-menu.php">Home</a></li>
 		</ul>
 	</div>
 	<form action="cancelbookinguser.php" method="post">
@@ -57,7 +57,7 @@ if(isset($_POST['submit']))
 				if (mysqli_query($conn, $updatequery)) 
 				{
 							echo "Appointment Cancelled successfully..!!";
-							header( "Refresh:2; url=dashboard.php");
+							header( "Refresh:2; url=user-menu.php");
 
 				} 
 				else

@@ -95,6 +95,10 @@ echo "<td><td>" . $row["username"] ."</td></td>";
                                             <div></div>
                                             <div></div>
                                         </div>
+
+
+
+                                        
                                         <a onclick="req3()" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
@@ -126,6 +130,14 @@ echo "<td><td>" . $row["username"] ."</td></td>";
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
                                     </div>
+
+
+
+
+
+
+
+
                                     <div class="hexagon-item">
                                         <div class="hex-item">
                                             <div></div>
@@ -137,6 +149,10 @@ echo "<td><td>" . $row["username"] ."</td></td>";
                                             <div></div>
                                             <div></div>
                                         </div>
+
+
+
+                                        
                                         <a onclick="req5()" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
@@ -168,6 +184,8 @@ echo "<td><td>" . $row["username"] ."</td></td>";
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
                                     </div>
+                                   
+
                                     <div class="hexagon-item">
                                         <div class="hex-item">
                                             <div></div>
@@ -179,6 +197,30 @@ echo "<td><td>" . $row["username"] ."</td></td>";
                                             <div></div>
                                             <div></div>
                                         </div>
+                                        <a onclick="req8()" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-life-ring"></i>
+                                                </span>
+                                                <span  class="title">Cancel Booking</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+
+
+                                        
                                         <a  onclick="req7()" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
@@ -188,7 +230,13 @@ echo "<td><td>" . $row["username"] ."</td></td>";
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
+                                  
+                                  
+                                  
                                     </div>
+
+
+                                    
                                 </div>
                             </div>
                         </div>
@@ -219,7 +267,9 @@ echo "<td><td>" . $row["username"] ."</td></td>";
     function req7() {
         window.location.href = "contact-us.html";
     }
-    
+    function req8() {
+        window.location.href = "cancelbookinguser.php";
+    }
     </script>
 </body>
 </html>
