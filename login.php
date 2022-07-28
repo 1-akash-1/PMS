@@ -38,6 +38,12 @@
         <input type="password" class="login-input" name="password" placeholder="Password"/>
         <input type="submit" value="Login" name="submit" class="login-button"/>
         <p class="link">Don't have an account? <a href="registration.php"style="text-decoration: none">Register Now</a></p>
+        
+        Login as Admin <button id="reg-btn" class="an-btn"><a href="admin-login.html">LOGIN</button></a>
+      <br>
+      Login as Worker <button id="reg-btn" class="an-btn"><a href="worker-login.html">LOGIN</button></a> 
+     
+    </div>
   </form>
 <?php
     }
