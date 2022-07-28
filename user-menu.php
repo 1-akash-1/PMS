@@ -253,7 +253,7 @@ echo "<td><td>" . $row["username"] ."</td></td>";
         window.location.href = "viewuserappointments.php";
     }
     function req3() {
-        window.location.href = "profile.html";
+        window.location.href = "profile.php";
     }
     function req4() {
         window.location.href = "about-us.html";
