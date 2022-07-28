@@ -16,6 +16,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+<?php include "dbconfig.php"; ?>
+<?php include "db.php"; ?>
 
 <body>
   <div class="container rounded mt-5 bg-white p-md-5">
@@ -23,65 +25,68 @@
 
       <br>
     <div class="table-responsive">
-
-        <table class="table">
-            <thead>
-                <tr>
-                  <th scope="col" >Order#</th>
-                    <th scope="col">Name</th>                    
-                    <th scope="col">Contact</th>                    
-                    <th scope="col">Address</th>                    
-                    <th scope="col">House No.</th>  
-                    <th scope="col">Pin Code</th>                    
-                    <th scope="col">Date</th>                    
-                    <th scope="col">Time</th>     
-                    <th scope="col">Status</th> 
-                    <th scope="col">Worker</th> 
-                                      
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-blue">    
-                   <td class="pt-3 mt-1">#2022</td>        
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                    <td class="pt-3">24 July 2022</td>
-                     <td class="pt-3 mt-1">11:00 AM</td>
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
-
-                 <tr class="bg-blue">    
-                   <td class="pt-3 mt-1">#2022</td>        
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                    <td class="pt-3">24 July 2022</td>
-                     <td class="pt-3 mt-1">11:00 AM</td>
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
-
-                 <tr class="bg-blue">    
-                   <td class="pt-3 mt-1">#2022</td>        
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                    <td class="pt-3">24 July 2022</td>
-                     <td class="pt-3 mt-1">11:00 AM</td>
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
+    <?php
+	$sql5 = "Select * from users";
+			$result5=mysqli_query($conn, $sql5);  
+			echo "<table>
+					<tr>
+					<th>Address</th>
+					<th>Pincode</th>
+					<th>Housenumber</th>
+					<th>Phonenumber</th>
+					</tr>";
+					while($row5= mysqli_fetch_array($result5))
+				{
+					$sql5="SELECT *FROM users ";
+						$result5= mysqli_query($conn,$sql5);
+						while($row5= mysqli_fetch_array($result5))
+						{
+								echo "<tr>";
+								echo "<td>"  .$row5['address'] . "</td>";
+								echo "<td>" . $row5['Pincode'] . "</td>";
+								echo "<td>" . $row5['Housenumber'] . "</td>";
+								echo "<td>" . $row5['Phonenumber'] . "</td>";
+								echo "</tr>";
+						}
+		 		}
+							
+					?>
+          <?php
+	$sql1 = "Select * from book";
+			$result1=mysqli_query($conn, $sql1);  
+			echo "<table>
+					<tr>
+					<th>Appointment-Date</th>
+					<th>Name</th>
+					<th>Center</th>
+					<th>Collector</th>
+					<th>Status</th>
+					<th>Booked-On</th>
+					</tr>";
+			while($row1 = mysqli_fetch_array($result1))
+			{
+				$sql2="SELECT * from collector where did=".$row1['DID'];
+				$result2= mysqli_query($conn,$sql2);
+				while($row2= mysqli_fetch_array($result2))
+				{
+					$sql3="SELECT * from center where CID=".$row1['CID'];
+						$result3= mysqli_query($conn,$sql3);
+						while($row3= mysqli_fetch_array($result3))
+						{
+              
+								echo "<tr>";
+								echo "<td>" . $row1['DOV'] . "</td>";
+								echo "<td>" . $row1['Fname'] . "</td>";
+								echo "<td>"  .$row3['town'] . "</td>";
+								echo "<td>" . $row2['name'] . "</td>";
+								echo "<td>" . $row1['Status'] . "</td>";
+								echo "<td>" . $row1['Timestamp'] . "</td>";
+								echo "</tr>";
+						}
+				}
+				
+			}
+	?>
 
 
 

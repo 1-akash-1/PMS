@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Worker Details</title>
+    <title>User Details</title>
     <link rel="stylesheet" href="">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -16,71 +17,46 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+<?php include "dbconfig.php"; ?>
+<?php include "db.php"; ?>
 
 <body>
   <div class="container rounded mt-5 bg-white p-md-5">
-    <div class="h2 font-weight-bold">Worker Details</div>
+    <div class="h2 font-weight-bold">User Details</div>
 
       <br>
     <div class="table-responsive">
 
-        <table class="table">
-            <thead>
-                <tr>
-                  
-                    <th scope="col">Name</th>                    
-                    <th scope="col">Contact</th>                    
-                    <th scope="col">Address</th>                    
-                    <th scope="col">House No.</th>  
-                    <th scope="col">Pin Code</th>                    
-                   
-                    <th scope="col">Status</th> 
-                      <th scope="col">Assign Work</th> 
-                    
-                    
-                                      
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-blue">    
-                         
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                    
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
-
-                 <tr class="bg-blue">    
-                    
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                   
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                </tr>
-
-                 <tr class="bg-blue">    
-                        
-                     <td class="pt-3 mt-1">Emilia Thomas</td>    
-                     <td class="pt-3">7876677866</td>            
-                    <td class="pt-3 mt-1">Dream House ,Kochi</td>
-                    <td class="pt-3">55CBG</td>
-                     <td class="pt-3 mt-1">670000</td>
-                   
-                    
-                    <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                    <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td>
-                   
-                </tr>
+    <?php
+	$sql5 = "Select * from users";
+			$result5=mysqli_query($conn, $sql5);  
+			echo "<table>
+					<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Pincode</th>
+					<th>Address</th>
+                    <th>Housenumber</th>
+                    <th>Phonenumber</th>
+					</tr>";
+					while($row5= mysqli_fetch_array($result5))
+				{
+					$sql5="SELECT *FROM users ";
+						$result5= mysqli_query($conn,$sql5);
+						while($row5= mysqli_fetch_array($result5))
+						{
+								echo "<tr>";
+								echo "<td>"  .$row5['username'] . "</td>";
+								echo "<td>" . $row5['email'] . "</td>";
+								echo "<td>" . $row5['Pincode'] . "</td>";
+								echo "<td>" . $row5['address'] . "</td>";
+                                echo "<td>" . $row5['Housenumber'] . "</td>";
+                                echo "<td>" . $row5['Phonenumber'] . "</td>";
+								echo "</tr>";
+						}
+		 		}
+							
+					?>
 
 
 
@@ -129,16 +105,15 @@
 </body>
 
 </html>
-
-
-
-<!--<!DOCTYPE html>
+     
+     
+<!--!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Worker Details</title>
-    <link rel="stylesheet" href="style.css">
+    <title>User Details</title>
+    <link rel="stylesheet" href="admin-userdetails.css">
 </head>
 
 <body>
@@ -146,7 +121,7 @@
         <center>
         <div class="center">
 
-            <h2>Worker Details</h2>
+            <h2>User Details</h2>
            
             <div class="table">
 
@@ -158,7 +133,7 @@
                         <th>House Number</th>
                         <th>PIN CODE</th>
                         <th>Status</th>
-                        <th>Assign Work</th>
+                      
                       
                     </tr>
                     <tr>
@@ -168,8 +143,6 @@
                       <td></td>
                       <td></td>
                       <td></td>
-                      <td></td>
-                     
                      
                     </tr>
 
