@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Login</title>
+    <title>User Login</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -22,8 +22,8 @@
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['email'] = $email;
-            // Redirect to user dashboard page
-            header("Location: dashboard.php");
+            // Redirect to user user-menu page
+            header("Location: user-menu.php");
         } else {
             echo "<div class='form'>
                   <h3>Incorrect email/password.</h3><br/>

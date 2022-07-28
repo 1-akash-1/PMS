@@ -42,7 +42,7 @@ function sendMail($email,$verification_code)
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Registration</title>
+    <title>User Registration</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -98,7 +98,7 @@ function sendMail($email,$verification_code)
         <input type="text" class="login-input" name="address" placeholder="Address" required />
         <input type="text" class="login-input" name="Pincode" placeholder="Pincode" required />
         <input type="text" class="login-input" name="Housenumber" placeholder="Housenumber" required />
-        <input type="text" class="login-input" name="Phonenumber" placeholder="Phonenumber"required /   >
+        <input type="text" class="login-input" name="Phonenumber" placeholder="Phonenumber"required />
         <input type="submit" name="submit" value="Register" class="login-button">
         <p class="link">Already have an account? <a href="login.php"style="text-decoration: none">Login here</a></p>
     </form>

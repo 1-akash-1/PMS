@@ -1,3 +1,9 @@
+<?php
+//include auth_session.php file on all user panel pages
+include("auth_session.php");
+require('db.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +14,17 @@
     <link rel="stylesheet" href="index1.css">
 </head>
 <body>
+<h1>Welcome <?php
+ $email = $_SESSION['email'];
+$sql = "SELECT username FROM users where email='$email'";
+$result = $con->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<td><td>" . $row["username"] ."</td></td>";
+}
+}
+?></h1>
     <main class="site-wrapper">
   <div class="pt-table desktop-768">
     <div class="pt-tablecell page-home relative" style="background-image: url(https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
